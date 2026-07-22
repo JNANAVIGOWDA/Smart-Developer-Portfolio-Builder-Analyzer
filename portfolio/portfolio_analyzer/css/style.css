@@ -1,0 +1,377 @@
+:root {
+    /* Color Palette */
+    --primary-color: #4A90E2;    /* Blue */
+    --secondary-color: #6C5CE7;  /* Purple */
+    --accent-color: #00C9A7;     /* Teal */
+    
+    /* Light Mode - Ultra Vibrant Mesh Gradient */
+    --bg-gradient: radial-gradient(at 0% 0%, rgba(74, 144, 226, 0.25) 0px, transparent 50%),
+                   radial-gradient(at 100% 0%, rgba(108, 92, 231, 0.25) 0px, transparent 50%),
+                   radial-gradient(at 50% 50%, rgba(0, 201, 167, 0.15) 0px, transparent 50%),
+                   radial-gradient(at 100% 100%, rgba(74, 144, 226, 0.2) 0px, transparent 50%),
+                   radial-gradient(at 0% 100%, rgba(108, 92, 231, 0.2) 0px, transparent 50%),
+                   #ffffff;
+    --bg-color: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: rgba(74, 144, 226, 0.2);
+    --navbar-bg: rgba(255, 255, 255, 0.9);
+    
+    /* UI Values */
+    --border-radius: 16px;
+    --shadow-soft: 0 10px 30px rgba(74, 144, 226, 0.08);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-theme="dark"] {
+    /* Dark Mode - High Contrast */
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --bg-color: #0f172a;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-border: rgba(255, 255, 255, 0.15);
+    --navbar-bg: rgba(15, 23, 42, 0.9);
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* --- Helpers to fix invisible text in Dark Mode --- */
+.text-muted, .text-secondary {
+    color: var(--text-muted) !important;
+}
+
+.text-dark {
+    color: var(--text-main) !important;
+}
+
+.navbar-brand {
+    color: var(--text-main) !important;
+}
+
+/* --- Glassmorphism / Professional Cards --- */
+.glass-card, .custom-card {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* --- Typography --- */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+[data-theme="dark"] .gradient-text {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Navbar --- */
+.navbar-custom {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--card-border);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.navbar-custom .nav-link {
+    color: var(--text-main) !important;
+    font-weight: 600;
+    margin: 0 12px;
+}
+
+/* --- Buttons --- */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white !important;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-gradient:hover {
+    filter: brightness(1.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+}
+
+.btn-outline-custom {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+    border-radius: 12px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-custom:hover {
+    background: var(--primary-color);
+    color: white !important;
+}
+
+/* --- Skills Badges --- */
+.skill-badge {
+    display: inline-block;
+    padding: 10px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    margin: 6px;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+.skill-badge:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* --- Project Cards --- */
+.project-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .project-img-placeholder {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.tech-tag {
+    font-size: 0.8rem;
+    padding: 5px 14px;
+    border-radius: 8px;
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* --- Contact Badges --- */
+.contact-badge {
+    background: var(--card-bg) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--card-border) !important;
+    font-weight: 600 !important;
+}
+
+/* --- Hero Section --- */
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.hero-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: var(--shadow-soft);
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+[data-theme="dark"] .hero-avatar {
+    border-color: #1e293b;
+}
+
+/* --- Particles --- */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.1;
+    animation: drift 25s infinite linear;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, -100vh); }
+}
+
+/* --- PDF Mode (Forces perfect alignment during export) --- */
+.pdf-mode {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.pdf-mode [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.pdf-mode .glass-card, .pdf-mode .project-card, .pdf-mode .skill-badge {
+    background: #ffffff !important;
+    border: 1px solid #eeeeee !important;
+    box-shadow: none !important;
+    color: #1a1a1a !important;
+    backdrop-filter: none !important;
+}
+
+.pdf-mode .hero-section {
+    text-align: center !important;
+    padding-top: 20px !important;
+}
+
+.pdf-mode .hero-avatar {
+    margin-bottom: 20px !important;
+    border-color: #eee !important;
+}
+
+.pdf-mode .gradient-text {
+    background: none !important;
+    color: #4A90E2 !important;
+    -webkit-text-fill-color: #4A90E2 !important;
+}
+
+.pdf-mode .no-print {
+    display: none !important;
+}
+
+.pdf-mode .container {
+    max-width: 900px !important;
+}
+
+.pdf-mode .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.pdf-mode .col-lg-7, .pdf-mode .col-lg-5, .pdf-mode .col-lg-6 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+}
+
+.pdf-mode .justify-content-lg-start {
+    justify-content: center !important;
+}
+
+.pdf-mode .text-lg-start {
+    text-align: center !important;
+}
+
+/* --- Form Styling --- */
+.form-control {
+    background: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 12px 18px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    background: white;
+    color: #0f172a;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.form-label {
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    section { padding: 60px 0; }
+    .hero-title { font-size: 2.5rem; }
+}
+
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .no-print, .particles, .navbar-custom {
+        display: none !important;
+    }
+    .glass-card, .project-card, .skill-badge {
+        background: white !important;
+        border: 1px solid #eee !important;
+        box-shadow: none !important;
+        color: black !important;
+        backdrop-filter: none !important;
+        transform: none !important;
+    }
+    .gradient-text {
+        background: none !important;
+        color: #4A90E2 !important;
+        -webkit-text-fill-color: #4A90E2 !important;
+    }
+    .text-muted, .text-secondary {
+        color: #555 !important;
+    }
+    .hero-avatar {
+        border-color: #ddd !important;
+        box-shadow: none !important;
+    }
+    section {
+        padding: 20px 0 !important;
+        page-break-inside: avoid;
+    }
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 15mm !important;
+    }
+}

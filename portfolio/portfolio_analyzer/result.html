@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result - DevAnalyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="particles"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-custom py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-code gradient-text me-2"></i> DevAnalyzer
+            </a>
+            <div class="ms-auto">
+                <i class="fa-solid fa-moon" id="theme-toggle" title="Toggle Dark/Light Mode"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="zoom-in">
+                <div class="glass-card p-5">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold">Your Portfolio <span class="gradient-text">Analysis</span></h2>
+                        <p class="text-muted">Here is how your profile stacks up based on our intelligent scoring system.</p>
+                    </div>
+                    
+                    <div class="text-center mb-5">
+                        <h1 class="display-1 fw-bold text-main mb-0" id="scoreDisplay">0</h1>
+                        <p class="text-muted fs-5">out of 100</p>
+                        
+                        <div class="progress mt-4 mx-auto" style="max-width: 500px; height: 15px; background: var(--card-border);">
+                            <div class="progress-bar progress-bar-custom progress-bar-striped progress-bar-animated" id="scoreBar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <h4 class="fw-bold mb-4 border-bottom pb-2" style="border-color: var(--card-border) !important;">
+                        <i class="fa-solid fa-lightbulb text-warning me-2"></i> Actionable Suggestions
+                    </h4>
+                    <ul class="analyzer-list mb-5" id="suggestionsList">
+                        <!-- Populated by JS -->
+                    </ul>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="index.html" class="btn btn-outline-custom">
+                            <i class="fa-solid fa-house me-2"></i> Home
+                        </a>
+                        <button class="btn btn-gradient px-4" id="viewPortfolioBtn">
+                            View Live Portfolio <i class="fa-solid fa-external-link-alt ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userId = getQueryParam('user_id');
+            const historyId = getQueryParam('history_id');
+            
+            let fetchUrl = 'get_result.php';
+            if (historyId) {
+                fetchUrl += '?history_id=' + historyId;
+            }
+
+            fetch(fetchUrl)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        const score = data.data.score;
+                        const suggestions = data.data.suggestions;
+                        const currentUserId = data.data.user_id;
+
+                        // Animate Score
+                        let currentScore = 0;
+                        const scoreInterval = setInterval(() => {
+                            if (currentScore >= score) {
+                                clearInterval(scoreInterval);
+                            } else {
+                                currentScore++;
+                                document.getElementById('scoreDisplay').textContent = currentScore;
+                                document.getElementById('scoreBar').style.width = currentScore + '%';
+                            }
+                        }, 20);
+
+                        // Populate Suggestions
+                        const list = document.getElementById('suggestionsList');
+                        suggestions.forEach(sug => {
+                            const li = document.createElement('li');
+                            li.innerHTML = `<i class="fa-solid fa-check-circle text-success me-2"></i> ${sug}`;
+                            list.appendChild(li);
+                        });
+
+                        const staticUrl = data.static_url;
+
+                        document.getElementById('viewPortfolioBtn').addEventListener('click', () => {
+                            window.location.href = staticUrl;
+                        });
+
+                    } else {
+                        alert(data.message);
+                        window.location.href = 'login.html';
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

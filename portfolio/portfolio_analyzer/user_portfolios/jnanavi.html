@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jnanavi N gowda | Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom py-3 sticky-top no-print">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#">Jnanavi<span class="gradient-text">.dev</span></a>
+            
+            <div class="d-flex align-items-center order-lg-last">
+                <i class="fa-solid fa-moon me-3" id="theme-toggle" title="Toggle Dark/Light Mode"></i>
+                <button class="btn btn-outline-custom ms-2" onclick="copyPortfolioLink()"><i class="fa-solid fa-link"></i> Copy Link</button>
+                <button class="btn btn-gradient ms-2" onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+                <button class="navbar-toggler border-0 ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars text-main"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="particles no-print"></div>
+
+    <div id="portfolio-content">
+        
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section py-5">
+            <div class="container py-5 text-center text-lg-start">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-5 mb-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                        
+                        <div class="d-flex flex-wrap gap-3 mb-3 justify-content-center justify-content-lg-start">
+                                                                                </div>
+
+                        <h1 class="hero-title mb-2">Hi, I'm <span class="gradient-text">Jnanavi N gowda</span></h1>
+                        <h3 class="hero-subtitle text-muted">Software Engineer</h3>
+                        
+                        <div class="mb-4" style="max-width: 650px;">
+                            <p class="text-muted fs-5 mb-3">Aspiring Full Stack Developer with strong fundamentals in web technologies, eager to build real-world applications and continuously enhance my skills while contributing effectively to organizational success.</p>
+                                                    </div>
+                        
+                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start no-print">
+                            <a href="#projects" class="btn btn-gradient">View My Work</a>
+                                                    </div>
+                    </div>
+                    <div class="col-lg-5 text-center order-1 order-lg-2 mb-5 mb-lg-0" data-aos="fade-left">
+                                                    <div class="bg-gradient-custom text-white rounded-circle d-inline-flex align-items-center justify-content-center hero-avatar shadow-lg" style="width: 250px; height: 250px; font-size: 6rem; border-width: 8px;">
+                                J                            </div>
+                                            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="py-5" style="background: rgba(0,0,0,0.02);">
+            <div class="container py-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title gradient-text display-6 fw-bold">My Expertise</h2>
+                    <p class="text-muted">Technologies I've been working with recently</p>
+                </div>
+                
+                <div class="glass-card p-5" data-aos="zoom-in">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                                            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Showcase -->
+        <section id="projects" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title gradient-text display-6 fw-bold">Featured Projects</h2>
+                    <p class="text-muted">Some of the real-world applications I've built</p>
+                </div>
+                
+                <div class="row g-5">
+                                    </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section id="contact" class="py-5" style="background: rgba(0,0,0,0.02);">
+            <div class="container py-5 text-center">
+                <div data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-4">Let's <span class="gradient-text">Connect</span></h2>
+                    <p class="text-muted fs-5 mb-5 mx-auto" style="max-width: 600px;">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                </div>
+                
+                <div class="d-flex justify-content-center gap-4 flex-wrap" data-aos="zoom-in">
+                    <a href="mailto:3jnanavingowda12@gmail.com" class="glass-card text-decoration-none px-4 py-3 d-flex align-items-center gap-3 contact-link">
+                        <i class="fa-solid fa-envelope fs-2 text-danger"></i>
+                        <span class="fw-semibold text-main fs-5">Email Me</span>
+                    </a>
+                    
+                    
+                    <a href="https://github.com/JNANAVIGOWDA" target="_blank" class="glass-card text-decoration-none px-4 py-3 d-flex align-items-center gap-3 contact-link">
+                        <i class="fa-brands fa-github fs-2 text-main"></i>
+                        <span class="fw-semibold text-main fs-5">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- END PORTFOLIO CONTENT -->
+
+    <!-- 5. GitHub Open Source Stats -->
+    <section id="github-stats" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title gradient-text display-6 fw-bold">Open Source Contributions</h2>
+                <p class="text-muted">My activity on GitHub</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center" id="github-stats-container">
+                <div class="col-12 text-center text-muted">
+                    <div class="spinner-border text-primary mb-3" role="status"></div>
+                    <p>Loading GitHub stats...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center mt-5 no-print" style="border-top: 1px solid var(--card-border);">
+        <div class="container">
+            <p class="mb-0 fw-semibold text-muted">&copy; 2026 Jnanavi N gowda. Built with DevAnalyzer.</p>
+        </div>
+    </footer>
+
+    <!-- HIDDEN PDF TEMPLATE (Colorized & Professional) -->
+    <div id="pdf-template" style="display: none; width: 750px; padding: 50px; background: #ffffff; color: #1a1a1a; font-family: 'Poppins', Arial, sans-serif; margin: 0 auto;">
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #4A90E2; padding-bottom: 25px; margin-bottom: 40px;">
+            <div>
+                <h1 style="margin: 0; color: #0f172a; font-size: 36px; font-weight: 800;">Jnanavi N gowda</h1>
+                <p style="margin: 8px 0; color: #6C5CE7; font-size: 20px; font-weight: 700;">Software Engineer</p>
+                <div style="margin-top: 10px; color: #475569; font-size: 14px; font-weight: 500;">
+                    <span style="margin-right: 15px;"><i class="fa-solid fa-envelope" style="color: #4A90E2;"></i> 3jnanavingowda12@gmail.com</span>
+                    <span style="margin-right: 15px;"><i class="fa-solid fa-phone" style="color: #4A90E2;"></i> </span>
+                    <span><i class="fa-solid fa-location-dot" style="color: #4A90E2;"></i> </span>
+                </div>
+            </div>
+                    </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: #ffffff; background: linear-gradient(135deg, #4A90E2, #6C5CE7); padding: 10px 20px; border-radius: 8px; font-size: 18px; margin-bottom: 15px;">ABOUT ME</h3>
+            <p style="line-height: 1.8; color: #334155; font-size: 15px;">Aspiring Full Stack Developer with strong fundamentals in web technologies, eager to build real-world applications and continuously enhance my skills while contributing effectively to organizational success.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: #ffffff; background: linear-gradient(135deg, #4A90E2, #6C5CE7); padding: 10px 20px; border-radius: 8px; font-size: 18px; margin-bottom: 15px;">TECHNICAL SKILLS</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            </div>
+        </div>
+
+        <div>
+            <h3 style="color: #ffffff; background: linear-gradient(135deg, #4A90E2, #6C5CE7); padding: 10px 20px; border-radius: 8px; font-size: 18px; margin-bottom: 15px;">FEATURED PROJECTS</h3>
+                    </div>
+    </div>
+
+    <!-- Bootstrap & Plugins JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Fetch GitHub Stats directly from client-side to ensure static deployment compatibility
+        document.addEventListener("DOMContentLoaded", function() {
+            const githubUsername = 'JNANAVIGOWDA';
+            if (githubUsername) {
+                fetch('https://api.github.com/users/' + encodeURIComponent(githubUsername))
+                    .then(response => {
+                        if (!response.ok) throw new Error('API Rate limit or user not found');
+                        return response.json();
+                    })
+                    .then(data => {
+                        document.getElementById('github-stats-container').innerHTML = `
+                            <div class="col-md-4" data-aos="fade-up">
+                                <div class="glass-card text-center h-100 border-0 shadow-sm p-4">
+                                    <i class="fa-brands fa-github fs-1 text-main mb-3"></i>
+                                    <h3 class="fw-bold">${data.public_repos || 0}</h3>
+                                    <p class="text-muted mb-0">Public Repositories</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="glass-card text-center h-100 border-0 shadow-sm p-4">
+                                    <i class="fa-solid fa-users fs-1 text-primary mb-3"></i>
+                                    <h3 class="fw-bold">${data.followers || 0}</h3>
+                                    <p class="text-muted mb-0">Followers</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="glass-card text-center h-100 border-0 shadow-sm p-4">
+                                    <i class="fa-solid fa-code-branch fs-1 text-success mb-3"></i>
+                                    <h3 class="fw-bold">${data.public_gists || 0}</h3>
+                                    <p class="text-muted mb-0">Public Gists</p>
+                                </div>
+                            </div>
+                        `;
+                    })
+                    .catch(err => {
+                        document.getElementById('github-stats-container').innerHTML = 
+                            '<div class="col-12 text-center text-muted"><p><i class="fa-brands fa-github fs-4 mb-2"></i><br>View my projects directly on <a href="https://github.com/JNANAVIGOWDA" target="_blank">GitHub</a></p></div>';
+                    });
+            } else {
+                document.getElementById('github-stats-container').innerHTML = '<div class="col-12 text-center text-muted"><p>GitHub profile not linked.</p></div>';
+            }
+        });
+
+        function copyPortfolioLink() {
+            const el = document.createElement('textarea');
+            el.value = window.location.href;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Portfolio link copied to clipboard!');
+        }
+
+        function downloadPDF() {
+            const element = document.getElementById('pdf-template');
+            
+            // Temporarily show the template for capture
+            element.style.display = 'block';
+            
+            const opt = {
+                margin:       10,
+                filename:     'Jnanavi N gowda_Portfolio.pdf',
+                image:        { type: 'jpeg', quality: 1.0 },
+                html2canvas:  { 
+                    scale: 3, 
+                    useCORS: true, 
+                    letterRendering: true
+                },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Capture the clean template instead of the complex website
+            html2pdf().set(opt).from(element).save().then(() => {
+                element.style.display = 'none'; // Hide it back
+            });
+        }
+    </script>
+</body>
+</html>

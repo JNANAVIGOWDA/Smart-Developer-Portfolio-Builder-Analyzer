@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jnanavi N N | Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#">Jnanavi<span class="gradient-text">.dev</span></a>
+            
+            <div class="d-flex align-items-center order-lg-last">
+                <i class="fa-solid fa-moon me-3" id="theme-toggle" title="Toggle Dark/Light Mode"></i>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars text-main"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#analyzer">Analyzer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Background Particles -->
+    <div class="particles"></div>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                    <h5 class="text-muted fw-semibold mb-3">👋 Hello, I am</h5>
+                    <h1 class="display-3 fw-bold mb-3">Jnanavi N N</h1>
+                    <h3 class="gradient-text mb-4">Aspiring Full Stack Developer | MCA Student</h3>
+                    <p class="text-muted fs-5 mb-5">Building modern, aesthetic, and functional web applications with clean code and great user experiences.</p>
+                    
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#projects" class="btn btn-gradient">View Projects</a>
+                        <a href="#" class="btn btn-outline-custom">Download Resume</a>
+                        <a href="https://github.com" target="_blank" class="btn btn-outline-secondary rounded-pill border-0 px-3 bg-light"><i class="fa-brands fa-github fs-5 text-dark"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="btn btn-outline-secondary rounded-pill border-0 px-3 bg-light"><i class="fa-brands fa-linkedin text-primary fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center order-1 order-lg-2 mb-5 mb-lg-0" data-aos="fade-left">
+                    <!-- Placeholder avatar using UI Faces or similar -->
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Jnanavi" class="hero-avatar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title gradient-text" data-aos="fade-up">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="glass-card text-center" data-aos="zoom-in">
+                        <i class="fa-solid fa-quote-left fs-1 text-muted opacity-50 mb-4"></i>
+                        <p class="fs-5 lh-lg mb-4">
+                            I am a passionate Master of Computer Applications (MCA) student with a strong interest in Full Stack Development. I love bridging the gap between beautiful design and solid backend logic. My goal is to build scalable applications that solve real-world problems while delivering an exceptional user experience.
+                        </p>
+                        <hr class="w-25 mx-auto mb-4 border-secondary">
+                        <div class="d-flex justify-content-center gap-4">
+                            <div><h3 class="fw-bold gradient-text">2+</h3> <span class="text-muted small">Years Coding</span></div>
+                            <div><h3 class="fw-bold gradient-text">10+</h3> <span class="text-muted small">Projects Built</span></div>
+                            <div><h3 class="fw-bold gradient-text">1</h3> <span class="text-muted small">Goal: Innovate</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title gradient-text" data-aos="fade-up">Technical Skills</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card h-100">
+                        <h4 class="mb-4"><i class="fa-solid fa-code text-primary me-2"></i> Frontend</h4>
+                        <span class="skill-badge"><i class="fa-brands fa-html5 text-danger"></i> HTML5</span>
+                        <span class="skill-badge"><i class="fa-brands fa-css3-alt text-primary"></i> CSS3</span>
+                        <span class="skill-badge"><i class="fa-brands fa-js text-warning"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fa-brands fa-bootstrap text-purple" style="color: #6C5CE7;"></i> Bootstrap 5</span>
+                        <span class="skill-badge"><i class="fa-brands fa-react text-info"></i> React (Learning)</span>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card h-100">
+                        <h4 class="mb-4"><i class="fa-solid fa-server text-success me-2"></i> Backend</h4>
+                        <span class="skill-badge"><i class="fa-brands fa-php text-primary"></i> Core PHP</span>
+                        <span class="skill-badge"><i class="fa-solid fa-database text-secondary"></i> MySQL</span>
+                        <span class="skill-badge"><i class="fa-brands fa-node-js text-success"></i> Node.js</span>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card h-100">
+                        <h4 class="mb-4"><i class="fa-solid fa-toolbox text-warning me-2"></i> Tools & Others</h4>
+                        <span class="skill-badge"><i class="fa-brands fa-git-alt text-danger"></i> Git</span>
+                        <span class="skill-badge"><i class="fa-brands fa-github text-dark"></i> GitHub</span>
+                        <span class="skill-badge"><i class="fa-solid fa-terminal text-secondary"></i> XAMPP</span>
+                        <span class="skill-badge"><i class="fa-brands fa-figma text-info"></i> Figma Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title gradient-text" data-aos="fade-up">Featured Projects</h2>
+            
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card project-card p-0 overflow-hidden">
+                        <div class="bg-gradient-custom p-4 text-center">
+                            <i class="fa-solid fa-chart-line text-white fs-1"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-2">Portfolio Analyzer</h4>
+                            <p class="tech-stack mb-3">HTML • CSS • PHP • MySQL</p>
+                            <p class="text-muted mb-4">A full-stack web application that allows users to input their data, fetch live GitHub stats, and receive an AI-driven score with suggestions for improvement.</p>
+                            <div class="mt-auto border-top pt-3 d-flex justify-content-between">
+                                <a href="#" class="btn btn-sm btn-outline-custom"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-gradient"><i class="fa-solid fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card project-card p-0 overflow-hidden">
+                        <div class="bg-gradient-custom p-4 text-center" style="background: linear-gradient(135deg, #00C9A7, #4A90E2);">
+                            <i class="fa-solid fa-store text-white fs-1"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-2">E-Commerce Platform</h4>
+                            <p class="tech-stack mb-3">Bootstrap • JS • PHP</p>
+                            <p class="text-muted mb-4">A fully functional online store with user authentication, product catalog, shopping cart logic, and admin dashboard for inventory management.</p>
+                            <div class="mt-auto border-top pt-3 d-flex justify-content-between">
+                                <a href="#" class="btn btn-sm btn-outline-custom"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-gradient"><i class="fa-solid fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glass-card project-card p-0 overflow-hidden">
+                        <div class="bg-gradient-custom p-4 text-center" style="background: linear-gradient(135deg, #6C5CE7, #a29bfe);">
+                            <i class="fa-solid fa-tasks text-white fs-1"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-2">TaskMaster App</h4>
+                            <p class="tech-stack mb-3">React • Node.js • Express</p>
+                            <p class="text-muted mb-4">A productivity application allowing users to manage daily tasks, set priorities, and track completion progress with a clean drag-and-drop interface.</p>
+                            <div class="mt-auto border-top pt-3 d-flex justify-content-between">
+                                <a href="#" class="btn btn-sm btn-outline-custom"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#" class="btn btn-sm btn-gradient"><i class="fa-solid fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GitHub Stats & 6. Portfolio Analyzer Section -->
+    <section id="analyzer" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title gradient-text" data-aos="fade-up">Profile Insights</h2>
+            
+            <div class="row g-4 align-items-center">
+                <!-- GitHub Stats -->
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="glass-card text-center h-100">
+                        <i class="fa-brands fa-github fs-1 mb-3 text-main"></i>
+                        <h4 class="fw-bold mb-4">Live GitHub Stats</h4>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 border rounded">
+                                    <h2 class="fw-bold gradient-text" id="repo-count">--</h2>
+                                    <span class="text-muted small">Public Repos</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border rounded">
+                                    <h2 class="fw-bold gradient-text" id="followers-count">--</h2>
+                                    <span class="text-muted small">Followers</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-light rounded" style="background: rgba(255,255,255,0.05) !important;">
+                            <img src="https://ghchart.rshah.org/4A90E2/octocat" alt="GitHub Contribution Graph" class="img-fluid" style="filter: hue-rotate(0deg); opacity: 0.8;">
+                            <p class="small text-muted mt-2 mb-0">Contribution Graph</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analyzer Card -->
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="glass-card h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="fw-bold m-0"><i class="fa-solid fa-magnifying-glass-chart text-primary me-2"></i> Portfolio Score</h4>
+                            <span class="badge bg-success fs-6 rounded-pill">Excellent</span>
+                        </div>
+                        
+                        <div class="text-center mb-4">
+                            <h1 class="display-2 fw-bold text-main mb-0">85<span class="fs-4 text-muted">/100</span></h1>
+                        </div>
+
+                        <div class="progress mb-4" style="height: 15px; border-radius: 10px; background: rgba(0,0,0,0.1);">
+                            <div class="progress-bar progress-bar-custom progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%"></div>
+                        </div>
+
+                        <h5 class="fw-bold mt-4 mb-3">Actionable Suggestions:</h5>
+                        <ul class="analyzer-list">
+                            <li><i class="fa-solid fa-check-circle text-success"></i> Strong frontend skills demonstrated.</li>
+                            <li><i class="fa-solid fa-lightbulb"></i> Learn React or Vue to modernize your tech stack.</li>
+                            <li><i class="fa-solid fa-lightbulb"></i> Add more open-source contributions to GitHub.</li>
+                            <li><i class="fa-solid fa-check-circle text-success"></i> Good variety of personal projects listed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title gradient-text" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <form id="contact-form">
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted">Name</label>
+                                    <input type="text" class="form-control bg-transparent text-main" required placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted">Email</label>
+                                    <input type="email" class="form-control bg-transparent text-main" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-muted">Message</label>
+                                <textarea class="form-control bg-transparent text-main" rows="4" required placeholder="Let's build something amazing together..."></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-gradient btn-lg px-5">
+                                    <i class="fa-solid fa-paper-plane me-2"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-5 text-center">
+                            <h5 class="fw-bold mb-3">Or connect with me on</h5>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="mailto:jnanavi@example.com" class="btn btn-outline-custom rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-envelope fs-5"></i></a>
+                                <a href="https://github.com" class="btn btn-outline-custom rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-github fs-5"></i></a>
+                                <a href="https://linkedin.com" class="btn btn-outline-custom rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-linkedin-in fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="py-4 text-center mt-5" style="background: rgba(0,0,0,0.05); backdrop-filter: blur(5px);">
+        <div class="container">
+            <p class="mb-0 fw-semibold text-muted">&copy; 2026 Jnanavi N N. Built with <i class="fa-solid fa-heart text-danger"></i></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Plugins JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
